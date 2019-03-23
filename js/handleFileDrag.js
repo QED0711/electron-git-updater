@@ -1,15 +1,12 @@
-import { exec } from 'shelljs';
 
 
-// HANDLE FILE DRAG
 
 const handleFileDrag = () => {
-    
+    alert("CALLED")
     const drop = document.getElementById("document-holder");
 
     const files = document.getElementById("files");
-    
-    // Add drag and drop functionality to div
+
     drop.addEventListener('dragover', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -32,23 +29,5 @@ const handleFileDrag = () => {
 
 }
 
-// GIT PROCESS
-
-const gitProcess = (/*path, datetime*/) => {
-    
-    await exec(`git --git-dir=${path}.git add .`, {async: true});
-    await exec(`git --git-dir=${path}.git commit -m "auto commit: ${datetime}"`, {async: true});
-    await exec(`git --git-dir=${path}.git push -u origin master`, {async: true});
-    
-}
-
-
-handleFileDrag();
-
-
-
-setInterval(gitProcess, 20000)
-
-
-
+module.exports = handleFileDrag;
 

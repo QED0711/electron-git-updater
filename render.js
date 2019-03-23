@@ -1,9 +1,15 @@
 
 const shell = require('shelljs')
 
-shell.exec("git add .", (code, stdout,stderr) => {
+const callGitProcess = async () => {
+    await shell.exec("git add .", {async: true});
+    await shell.exec('git commit -m "this is a test commit"' , {async: true});
+    
+}
 
-})
+callGitProcess();
+
+shell.exec("git add .", {async: true});
 
 const files = document.getElementById("files");
 const drop = document.getElementById("document-holder");

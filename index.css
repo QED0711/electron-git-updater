@@ -1,0 +1,22 @@
+
+body{
+    text-align: center;
+}
+
+#document-holder{
+    height: 75px;
+    width: 300px; 
+
+    background-color: grey;
+    color: white;
+
+    margin: 0 auto;
+    box-shadow: 2px 2px 10px black inset;
+
+}
+
+#document-holder p {
+    padding: 1em;
+    font-family: sans-serif;
+    font-weight: 900;
+}

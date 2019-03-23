@@ -1,0 +1,18 @@
+{
+  "name": "git-backup",
+  "version": "1.0.0",
+  "description": "An automated backup process for git initialized directors",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Quinn Dizon",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.1.1"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  }
+}

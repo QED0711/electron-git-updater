@@ -1,8 +1,9 @@
 
 const shell = require('shelljs')
 
-shell.exec("echo $PWD")
-shell.exec('node --version')
+shell.exec("git add .", (code, stdout,stderr) => {
+
+})
 
 const files = document.getElementById("files");
 const drop = document.getElementById("document-holder");
@@ -20,8 +21,7 @@ drop.addEventListener('drop', (e) => {
     }
 })
 
-
-
+// append file/folder to the ul tag
 addFileToList = (file) => {
     const node = document.createElement("li")
     node.innerText = file

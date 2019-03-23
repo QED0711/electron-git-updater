@@ -4,7 +4,7 @@ const shell = require('shelljs')
 const callGitProcess = async () => {
     await shell.exec("git add .", {async: true});
     await shell.exec('git commit -m "this is a test commit"' , {async: true});
-    await shell.exec('git puch -u origin master' , {async: true});
+    await shell.exec('git push -u origin master' , {async: true});
 }
 
 callGitProcess();

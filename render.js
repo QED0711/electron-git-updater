@@ -8,12 +8,17 @@ let currentTime,
 handleFileDrag();
 
 setInterval(() => {
-    currentTime = new Date();
     currentFilePaths = getCurrentFilePaths();
 
-    for(path of currentFilePaths){
-        gitProcess(path, currentTime);
+    if(currentFilePaths.length){
+        currentTime = new Date();
+    
+
+        for(path of currentFilePaths){
+            gitProcess(path, currentTime);
+        }
     }
+    
 }, 30000)
 
 

@@ -2,7 +2,6 @@
 
 
 const handleFileDrag = () => {
-    alert("CALLED")
     const drop = document.getElementById("document-holder");
 
     const files = document.getElementById("files");

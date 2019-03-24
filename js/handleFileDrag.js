@@ -1,5 +1,6 @@
 
 const handleDeleteItem = require("./handleDeleteItem");
+const handleCheckboxChange = require('./handleCheckboxChange');
 
 const handleFileDrag = () => {
     const drop = document.getElementById("document-holder");
@@ -23,14 +24,19 @@ const handleFileDrag = () => {
     addFileToList = (path) => {
 
         const nodeTemplate = `
-            <div class="file-path">
+            <div class="file-path" data-path="${path}">
                 <p>${path}</p>
                 <button class="remove-list-item">Remove Path</button>
+                
+                <br>
+                <label for="${path}">Monitor Directory</label>
+                <input type="checkbox" class="toggle-monitor" id="${path}" checked="true"/>
             </div>
         `
 
         files.innerHTML = files.innerHTML + nodeTemplate;
         handleDeleteItem();
+        handleCheckboxChange();
     }
 
 }

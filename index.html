@@ -16,11 +16,21 @@
 
     
     <h4>Files Staged for Update:</h4>
-    <ul id="files"></ul>
+    <!-- <ul id="files"></ul> -->
+
+    <div id="files"></div>
 
     <script>
         require('./js/handleFileDrag.js')
         require('./render.js')
     </script>
+
+    <template id="file-display-template">
+        <div class="file-path"> 
+            <p></p>
+            <button class="remove-list-item">Remove Node</button>
+        </div>
+    </template>
+
 </body>
 </html>

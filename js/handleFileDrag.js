@@ -20,10 +20,14 @@ const handleFileDrag = () => {
     })
 
     // append file/folder to the ul tag
-    addFileToList = (file) => {
-        const node = document.createElement("li")
-        node.innerText = file
-        files.appendChild(node);
+    addFileToList = (path) => {
+        // const node = document.createElement("li")
+        const nodeTemplate = document.getElementById('file-display-template')
+        const newNode = nodeTemplate.content.querySelector("div"); 
+        debugger
+        newNode.getElementsByTagName("p")[0].innerText = path;
+        files.appendChild(newNode);
+     
     }
 
 }

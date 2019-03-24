@@ -1,5 +1,5 @@
 
-
+const handleDeleteItem = require("./handleDeleteItem");
 
 const handleFileDrag = () => {
     const drop = document.getElementById("document-holder");
@@ -21,13 +21,16 @@ const handleFileDrag = () => {
 
     // append file/folder to the ul tag
     addFileToList = (path) => {
-        // const node = document.createElement("li")
-        const nodeTemplate = document.getElementById('file-display-template')
-        const newNode = nodeTemplate.content.querySelector("div"); 
-        debugger
-        newNode.getElementsByTagName("p")[0].innerText = path;
-        files.appendChild(newNode);
-     
+
+        const nodeTemplate = `
+            <div class="file-path">
+                <p>${path}</p>
+                <button class="remove-list-item">Remove Path</button>
+            </div>
+        `
+
+        files.innerHTML = files.innerHTML + nodeTemplate;
+        handleDeleteItem();
     }
 
 }

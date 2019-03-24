@@ -4,7 +4,8 @@ const getCurrentFilePaths = require('./js/getCurrentFiles');
 
 let currentTime,
     currentFilePaths;
- 
+
+// set file drag in window
 handleFileDrag();
 
 setInterval(() => {

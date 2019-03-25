@@ -11,7 +11,7 @@ const handleCheckboxChange = () => {
                 if(err)  throw err;
                 let directories = JSON.parse(data)
                 for(let d of directories){
-                    if(d.path === e.target.id){
+                    if(d.path === e.target.parentNode.id){
                         d.monitor = !d.monitor;
                         break;
                     }
